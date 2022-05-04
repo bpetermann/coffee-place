@@ -1,0 +1,23 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+  }
+  
+  .content:nth-child(even){
+    background-color: lightgray;
+  }
+  
+  .container {
+    height: 100vh;
+    flex: 3;
+    overflow: auto;
+    scrollbar-width: none;
+  }
+  
+  .container::-webkit-scrollbar {
+    display: none;
+  }
+  
