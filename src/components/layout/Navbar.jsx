@@ -1,15 +1,15 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink, Link } from 'react-router-dom';
-import { GiCoffeePot } from 'react-icons/gi';
+import { GiCoffeePot, GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <div className={classes.container}>
-        <GiCoffeePot size={30} />
+        <GiCoffeePot size={36} />
         <Link to='/'>
-          <h1>Navbar</h1>
+          <h1>BEN'S COFFEE</h1>
         </Link>
         <div className={classes.navigation}>
           <NavLink
@@ -28,6 +28,7 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
+          <GiHamburgerMenu size={30} className={classes.hamburger} />
         </div>
       </div>
     </div>

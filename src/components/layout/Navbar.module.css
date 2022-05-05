@@ -5,10 +5,6 @@
   margin-bottom: 2px; */
 }
 
-.logo {
-  height: 2rem;
-}
-
 .container {
   display: flex;
   align-items: center;
@@ -17,6 +13,10 @@
 }
 
 .container a {
+  text-decoration: none;
+}
+
+.container h1 {
   color: white;
   margin-left: 1rem;
   text-decoration: none;
@@ -25,9 +25,12 @@
 .navigation {
   margin-left: auto;
 }
+
 .navigation a {
   color: white;
   text-decoration: none;
+  display: none;
+  font-size: 1.25rem;
 }
 
 .navigation a:last-of-type {
@@ -37,5 +40,13 @@
 @media (min-width: 40rem) {
   .container {
     width: 75%;
+  }
+
+  .navigation a {
+    display: inline-block;
+  }
+
+  .hamburger {
+    display: none;
   }
 }
