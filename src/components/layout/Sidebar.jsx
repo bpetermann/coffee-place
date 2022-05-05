@@ -1,13 +1,13 @@
 import React from 'react';
 import classes from './Sidebar.module.css';
-import { GiCoffeePot } from 'react-icons/gi';
+import { SiBuymeacoffee } from 'react-icons/si';
 import Button from '../shared/Button';
 
 const Sidebar = () => {
   return (
     <div className={classes.sidebar}>
-      <div className={classes.container}>
-        <GiCoffeePot size={50} />
+      <div className={classes.container} >
+        <SiBuymeacoffee size={150} />
         <Button>Button</Button>
       </div>
     </div>

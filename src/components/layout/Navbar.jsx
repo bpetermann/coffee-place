@@ -1,13 +1,12 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink, Link } from 'react-router-dom';
-import { GiCoffeePot, GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu } from 'react-icons/gi';
 
 const Navbar = () => {
   return (
     <div className={classes.navbar}>
       <div className={classes.container}>
-        <GiCoffeePot size={36} />
         <Link to='/'>
           <h1>BEN'S COFFEE</h1>
         </Link>
