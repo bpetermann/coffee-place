@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import classes from './App.module.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from 'react-router-dom';
 import Home from './pages/Home';
 import Menue from './pages/Menue';
 import Contact from './pages/Contact';
@@ -54,13 +59,10 @@ function App() {
       <div className={classes.container}>
         <Sidebar />
         <Routes>
-          <Route path='/coffee-place/' exact>
-            <Redirect to='/' />
-          </Route>
           <Route path='/' element={<Home content={DUMMY_CONTENT} />} />
           <Route path='/menue' element={<Menue />} />
           <Route path='/contact' element={<Contact />} />
-          <Route path='/*' element={<Home />} />
+          <Route path='/*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>
     </Router>
