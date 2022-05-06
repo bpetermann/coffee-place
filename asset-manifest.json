@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/restaurant-homepage/static/css/main.72c95df7.css",
-    "main.js": "/restaurant-homepage/static/js/main.61c948e7.js",
-    "static/media/history.png": "/restaurant-homepage/static/media/history.f4c3931ff8118e7c160b.png",
-    "static/media/store.png": "/restaurant-homepage/static/media/store.aa634a1e5fba7a6c5408.png",
-    "static/media/plant.png": "/restaurant-homepage/static/media/plant.00849c21563a6a2c7098.png",
-    "static/media/advertisement.png": "/restaurant-homepage/static/media/advertisement.d3f0f43963fae8c29f74.png",
-    "static/media/product.png": "/restaurant-homepage/static/media/product.5ba8bf3f21776de67f34.png",
-    "static/media/organic.png": "/restaurant-homepage/static/media/organic.38f3212129c74932c269.png",
-    "static/media/brewing.png": "/restaurant-homepage/static/media/brewing.b3313dc0e7d2a9f4d60f.png",
-    "index.html": "/restaurant-homepage/index.html",
-    "main.72c95df7.css.map": "/restaurant-homepage/static/css/main.72c95df7.css.map",
-    "main.61c948e7.js.map": "/restaurant-homepage/static/js/main.61c948e7.js.map"
+    "main.css": "/coffee-place/static/css/main.72c95df7.css",
+    "main.js": "/coffee-place/static/js/main.bb97397a.js",
+    "static/media/history.png": "/coffee-place/static/media/history.f4c3931ff8118e7c160b.png",
+    "static/media/store.png": "/coffee-place/static/media/store.aa634a1e5fba7a6c5408.png",
+    "static/media/plant.png": "/coffee-place/static/media/plant.00849c21563a6a2c7098.png",
+    "static/media/advertisement.png": "/coffee-place/static/media/advertisement.d3f0f43963fae8c29f74.png",
+    "static/media/product.png": "/coffee-place/static/media/product.5ba8bf3f21776de67f34.png",
+    "static/media/organic.png": "/coffee-place/static/media/organic.38f3212129c74932c269.png",
+    "static/media/brewing.png": "/coffee-place/static/media/brewing.b3313dc0e7d2a9f4d60f.png",
+    "index.html": "/coffee-place/index.html",
+    "main.72c95df7.css.map": "/coffee-place/static/css/main.72c95df7.css.map",
+    "main.bb97397a.js.map": "/coffee-place/static/js/main.bb97397a.js.map"
   },
   "entrypoints": [
     "static/css/main.72c95df7.css",
-    "static/js/main.61c948e7.js"
+    "static/js/main.bb97397a.js"
   ]
 }
