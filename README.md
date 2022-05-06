@@ -6,12 +6,12 @@
 
 - Coffee place website created with react
 - React Router 6
-- [View Live](https://bpetermann.github.io/restaurant-homepage/)
+- [View Live](https://bpetermann.github.io/ coffee-place/)
 
 ## Getting started
 
 ```
-git clone https://github.com/bpetermann/restaurant-homepage.git
+git clone https://github.com/bpetermann/ coffee-place.git
 cd cv-application
 npm install
 npm start
