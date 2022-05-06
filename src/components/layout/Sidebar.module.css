@@ -23,13 +23,14 @@
 
 .banner h1 {
   margin: 1.75rem 0;
-  font-size: 2.6rem;
+  font-family: 'Merienda One', cursive;
 }
 
 @media (min-width: 40rem) {
   .sidebar {
     height: 100vh;
-    max-width: 40%;
+    min-width: 20rem;
+    max-width: 30%;
     overflow: hidden;
   }
 }

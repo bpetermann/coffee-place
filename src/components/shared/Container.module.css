@@ -1,0 +1,10 @@
+.container {
+  height: 100vh;
+  flex: 3;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}

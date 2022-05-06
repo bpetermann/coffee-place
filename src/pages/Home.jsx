@@ -1,12 +1,12 @@
 import React from 'react';
 import classes from './Home.module.css';
-import Footer from '../components/layout/Footer';
 import advertisement from '../components/assets/images/advertisement.png';
 import Button from '../components/shared/Button';
+import Container from '../components/shared/Container';
 
 const Home = ({ content }) => {
   return (
-    <div className={classes.container}>
+    <Container>
       <div
         className={classes['image-container']}
         style={{
@@ -41,8 +41,7 @@ const Home = ({ content }) => {
           );
         })}
       </div>
-      <Footer />
-    </div>
+    </Container>
   );
 };
 

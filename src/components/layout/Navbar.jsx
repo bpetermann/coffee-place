@@ -1,15 +1,16 @@
 import React from 'react';
 import classes from './Navbar.module.css';
 import { NavLink, Link } from 'react-router-dom';
-import { GiHamburgerMenu } from 'react-icons/gi';
+import { GiHamburgerMenu, GiCoffeeBeans } from 'react-icons/gi';
 
-const Navbar = () => {
+const Navbar = ({ toggleModal }) => {
   return (
     <div className={classes.navbar}>
       <div className={classes.container}>
         <Link to='/'>
-          <h1>Home</h1>
+          <GiCoffeeBeans size={30} style={{ color: '#fff' }} />
         </Link>
+        <h2>Ben's Coffee</h2>
         <div className={classes.navigation}>
           <NavLink
             to='/menue'
@@ -27,7 +28,11 @@ const Navbar = () => {
           >
             Contact
           </NavLink>
-          <GiHamburgerMenu size={30} className={classes.hamburger} />
+          <GiHamburgerMenu
+            onClick={toggleModal}
+            size={30}
+            className={classes.hamburger}
+          />
         </div>
       </div>
     </div>

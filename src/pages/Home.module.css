@@ -1,14 +1,3 @@
-.container {
-  height: 100vh;
-  flex: 3;
-  overflow: auto;
-  scrollbar-width: none;
-}
-
-.container::-webkit-scrollbar {
-  display: none;
-}
-
 .image-container {
   width: 100%;
   height: 20rem;

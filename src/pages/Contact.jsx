@@ -1,12 +1,12 @@
 import React from 'react';
-import Footer from '../components/layout/Footer';
 import classes from './Contact.module.css';
+import Container from '../components/shared/Container';
 
 const Contact = () => {
   return (
-    <div className={classes['container']}>
+    <Container>
       <div className={classes['form-container']}>
-        <h2>Let's Do This!</h2>
+        <h2>Join now!</h2>
         <form className={classes['form']}>
           <label>
             First Name:
@@ -27,10 +27,10 @@ const Contact = () => {
             />
           </label>
           <label>
-            Number:
+            Email:
             <input
               placeholder='Email'
-              type='number'
+              type='email'
               className={classes['form-element']}
               required
             />
@@ -45,19 +45,26 @@ const Contact = () => {
             />
           </label>
           <label>
-            Message:
-            <textarea
+            Password:
+            <input
               placeholder='Your Message'
-              type='textarea'
+              type='text'
+              className={classes['form-element']}
+              required
+            />
+          </label>
+          <label>
+            Confirm Password:
+            <input
+              placeholder='Your Message'
+              type='text'
               className={classes['form-element']}
               required
             />
           </label>
         </form>
       </div>
-
-      <Footer />
-    </div>
+    </Container>
   );
 };
 
