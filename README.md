@@ -6,7 +6,7 @@
 
 - Coffee place website created with react
 - React Router 6
-- [View Live](https://bpetermann.github.io/ coffee-place/)
+- [View Live](https://bpetermann.github.io/coffee-place/)
 
 ## Getting started
 

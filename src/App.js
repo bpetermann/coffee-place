@@ -54,6 +54,9 @@ function App() {
       <div className={classes.container}>
         <Sidebar />
         <Routes>
+          <Route path='/coffee-place/' exact>
+            <Redirect to='/' />
+          </Route>
           <Route path='/' element={<Home content={DUMMY_CONTENT} />} />
           <Route path='/menue' element={<Menue />} />
           <Route path='/contact' element={<Contact />} />
