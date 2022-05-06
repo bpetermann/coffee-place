@@ -1,20 +1,20 @@
 .button {
-    border: 1px solid #fff;
-    border-radius: 100rem;
-    padding: 0.4rem 1.6rem;
-    transition: background-color 0.2s;
-    transition-timing-function: ease-in-out;
-    text-align: center;
-    cursor: pointer;
-    background: transparent;
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: -0.014rem;
-  }
-  
-  .button:hover,
-  .button:focus,
-  .button:active {
-    background-color: rgba(0, 0, 0, 0.12);
-  }
+  border: 1px solid #488796;
+  border-radius: 100rem;
+  padding: 0.4rem 1.6rem;
+  transition: background-color 0.2s;
+  transition-timing-function: ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  color: #488796;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: -0.014rem;
+}
+
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: rgba(72, 135, 150, 0.12);
+}

@@ -14,7 +14,7 @@ const Button = ({ children, color }) => {
 };
 
 Button.defaultProps = {
-  color: '#fff',
+  color: '#488796',
 };
 
 Button.propTyped = {

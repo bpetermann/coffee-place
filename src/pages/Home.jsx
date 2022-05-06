@@ -21,7 +21,7 @@ const Home = ({ content }) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
           malesuada lacus ex, sit amet blandit leo lobortis eget.
         </p>
-        <Button color={'#242933'}>Order now!</Button>
+        <Button>Order now!</Button>
       </div>
       <div className={classes['articles-container']}>
         {content.map((item) => {
@@ -35,7 +35,7 @@ const Home = ({ content }) => {
               <div className={classes['article-text']}>
                 <h3>{item.name}</h3>
                 <p>{item.text}</p>
-                <Button color={'#242933'}>Read more</Button>
+                <Button color={'#488796'}>Read more</Button>
               </div>
             </div>
           );
