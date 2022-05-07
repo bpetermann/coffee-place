@@ -25,7 +25,7 @@ export default function SimpleAccordion() {
               fontFamily: 'Noto Sans, sans-serif',
             }}
           >
-            Accordion 1
+            About us
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -60,7 +60,7 @@ export default function SimpleAccordion() {
               fontFamily: 'Noto Sans, sans-serif',
             }}
           >
-            Accordion 2
+            Contact &amp; FAQ
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -95,7 +95,7 @@ export default function SimpleAccordion() {
               fontFamily: 'Noto Sans, sans-serif',
             }}
           >
-            Accordion 3
+            Careers
           </Typography>
         </AccordionSummary>
         <AccordionDetails>

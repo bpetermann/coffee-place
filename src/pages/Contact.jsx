@@ -47,7 +47,7 @@ const Contact = () => {
           <label>
             Password:
             <input
-              placeholder='Your Message'
+              placeholder='Password'
               type='text'
               className={classes['form-element']}
               required
@@ -56,7 +56,7 @@ const Contact = () => {
           <label>
             Confirm Password:
             <input
-              placeholder='Your Message'
+              placeholder='Confirm Password'
               type='text'
               className={classes['form-element']}
               required

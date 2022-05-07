@@ -3,8 +3,9 @@ import classes from './Home.module.css';
 import advertisement from '../components/assets/images/advertisement.png';
 import Button from '../components/shared/Button';
 import Container from '../components/shared/Container';
+import { articles } from '../data/ContentData';
 
-const Home = ({ content }) => {
+const Home = () => {
   return (
     <Container>
       <div
@@ -24,7 +25,7 @@ const Home = ({ content }) => {
         <Button>Order now!</Button>
       </div>
       <div className={classes['articles-container']}>
-        {content.map((item) => {
+        {articles.map((item) => {
           return (
             <div className={classes['article-container']} key={item.name}>
               <img
