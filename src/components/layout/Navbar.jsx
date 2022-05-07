@@ -21,12 +21,12 @@ const Navbar = ({ toggleModal }) => {
             Menue
           </NavLink>
           <NavLink
-            to='/contact'
+            to='/account'
             style={({ isActive }) =>
               isActive ? { borderBottom: '0.4rem solid white' } : undefined
             }
           >
-            Contact
+            Join now
           </NavLink>
           <GiHamburgerMenu
             onClick={toggleModal}

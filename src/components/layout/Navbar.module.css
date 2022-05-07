@@ -4,11 +4,10 @@
   height: 5rem;
 }
 
-.navbar h2{
+.navbar h2 {
   margin-left: 0.5rem;
   font-family: 'Merienda One', cursive;
 }
-
 
 .container {
   display: flex;

@@ -8,7 +8,7 @@ import {
 } from 'react-router-dom';
 import Home from './pages/Home';
 import Menue from './pages/Menue';
-import Contact from './pages/Contact';
+import Account from './pages/Account';
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import Modal from '../src/components/modal/Modal';
@@ -38,7 +38,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/menue' element={<Menue />} />
-          <Route path='/contact' element={<Contact />} />
+          <Route path='/account' element={<Account />} />
           <Route path='/*' element={<Navigate to='/' replace />} />
         </Routes>
       </div>
