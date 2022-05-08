@@ -1,4 +1,4 @@
-# Restaurant Homepage
+# Coffe Place Website
 
 ## Project Overview
 
@@ -39,7 +39,3 @@ npm start
 - Photo by <a href="https://unsplash.com/@erroljohn?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Errol John</a> on <a href="https://unsplash.com/s/photos/coffee-beans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
 - Photo by <a href="https://unsplash.com/@mostlymarvelling?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nancy Hughes</a> on <a href="https://unsplash.com/s/photos/coffee-beans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a><br>
 - Photo by <a href="https://unsplash.com/@tozzo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brunno Tozzo</a> on <a href="https://unsplash.com/s/photos/coffee-beans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
-  
-  
-  

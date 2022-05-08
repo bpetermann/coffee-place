@@ -4,14 +4,21 @@ import Container from '../components/shared/Container';
 import Button from '../components/shared/Button';
 
 const Account = () => {
+  const [title, setTitle] = useState('Join now!');
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
-  const [passwordIsValid, setPasswordIsValid] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
+  const [confirmPasswordTouched, setConfirmPasswordIsTouched] = useState(false);
+
+  const passwordIsValid = password.trim().length >= 6;
+  const passwordIsInavlid = !passwordIsValid && passwordTouched;
+  const confirmPasswordIsValid = password === confirmPassword ? true : false;
+  const confirmPasswordIsInvalid =
+    !confirmPasswordIsValid && confirmPasswordTouched;
 
   const firstnameChangeHandler = (event) => {
     setFirstname(event.target.value);
@@ -31,54 +38,54 @@ const Account = () => {
 
   const passwordChangeHandler = (event) => {
     setPassword(event.target.value);
-    if (password.length > 0 && event.target.value === confirmPassword) {
-      setPasswordIsValid(true);
-    }
   };
 
   const confirmPasswordChangeHandler = (event) => {
     setConfirmPassword(event.target.value);
-    if (password.length > 0 && password === event.target.value) {
-      setPasswordIsValid(true);
-    }
   };
 
   const submitAccountHandler = (event) => {
     event.preventDefault();
-    setPasswordTouched(true);
-    if (password !== confirmPassword) {
-      setPasswordIsValid(false);
+    if (!passwordIsValid || !confirmPasswordIsValid) {
       return;
     }
-    setPasswordIsValid(true);
-    console.log(
-      firstname,
-      lastname,
-      email,
-      phoneNumber,
-      password,
-      confirmPassword
-    );
+    setTitle('Success!');
     setFirstname('');
     setLastname('');
     setEmail('');
     setPhoneNumber('');
     setPassword('');
     setConfirmPassword('');
+    setPasswordTouched(false);
+    setConfirmPasswordIsTouched(false);
   };
 
-  console.log(passwordIsValid);
+  const passwordInputBlurHandler = (event) => {
+    event.preventDefault();
+    setPasswordTouched(true);
+  };
 
-  const passwordIsInavlid = !passwordIsValid && passwordTouched;
+  const confirmPasswordBlurHandler = (event) => {
+    event.preventDefault();
+    setConfirmPasswordIsTouched(true);
+  };
 
   const passwordInputClassName = !passwordIsInavlid
     ? classes['form-element']
     : `${classes['form-control']} ${classes['invalid']}`;
 
+  const confirmPasswordInputClassName = !confirmPasswordIsInvalid
+    ? classes['form-element']
+    : `${classes['form-control']} ${classes['invalid']}`;
+
+  const titleClassName = title.indexOf('Success')
+    ? ''
+    : `${classes['title-success']}`;
+
   return (
     <Container>
       <div className={classes['form-container']}>
-        <h2>Join now!</h2>
+        <h2 className={titleClassName}>{title}</h2>
         <form className={classes['form']} onSubmit={submitAccountHandler}>
           <label>
             First Name:
@@ -129,6 +136,7 @@ const Account = () => {
             <input
               value={password}
               onChange={passwordChangeHandler}
+              onBlur={passwordInputBlurHandler}
               placeholder='Password'
               type='password'
               className={passwordInputClassName}
@@ -136,7 +144,7 @@ const Account = () => {
             />
             {passwordIsInavlid && (
               <p className={classes['invalid-message']}>
-                *Passwords do not match
+                *Your password must be at least 6 characters long
               </p>
             )}
           </label>
@@ -145,11 +153,17 @@ const Account = () => {
             <input
               value={confirmPassword}
               onChange={confirmPasswordChangeHandler}
+              onBlur={confirmPasswordBlurHandler}
               placeholder='Confirm Password'
               type='password'
-              className={passwordInputClassName}
+              className={confirmPasswordInputClassName}
               required
             />
+            {confirmPasswordIsInvalid && (
+              <p className={classes['invalid-message']}>
+                *Passwords do not match
+              </p>
+            )}
           </label>
           <div className={classes['button-wrapper']}>
             <Button color={'#596d48'} type='submit'>

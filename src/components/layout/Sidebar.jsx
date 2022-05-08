@@ -1,6 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './Sidebar.module.css';
-import Button from '../shared/Button';
 import plant from '../assets/images/plant.png';
 
 const Sidebar = () => {
@@ -16,7 +16,9 @@ const Sidebar = () => {
           <h1>BEN'S COFFEE</h1>
         </div>
         <div>
-          <Button color={'#fff'}>Join now</Button>
+          <Link className={classes['button-link']} to='/account'>
+            Join now
+          </Link>
         </div>
       </div>
     </div>
