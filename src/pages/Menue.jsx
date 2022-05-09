@@ -7,6 +7,7 @@ import Button from '../components/shared/Button';
 const Menue = () => {
   return (
     <Container>
+      <h2 className={classes['headline']}>Menu / Our Beans </h2>
       <div className={classes['products-container']}>
         {products.map((item) => {
           return (

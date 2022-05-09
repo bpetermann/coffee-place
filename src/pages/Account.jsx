@@ -84,8 +84,11 @@ const Account = () => {
 
   return (
     <Container>
+      <h2 className={classes['headline']}>Join now /Create Account </h2>
+
       <div className={classes['form-container']}>
         <h2 className={titleClassName}>{title}</h2>
+        <p>* indicates required field</p>
         <form className={classes['form']} onSubmit={submitAccountHandler}>
           <label>
             First Name:
@@ -93,7 +96,8 @@ const Account = () => {
               value={firstname}
               onChange={firstnameChangeHandler}
               type='text'
-              placeholder='First Name'
+              placeholder='* First Name'
+              maxlength='50'
               className={classes['form-element']}
               required
             />
@@ -103,8 +107,9 @@ const Account = () => {
             <input
               value={lastname}
               onChange={lastNameChangeHandler}
-              placeholder='Last Name'
               type='text'
+              placeholder='* Last Name'
+              maxlength='50'
               className={classes['form-element']}
               required
             />
@@ -114,8 +119,9 @@ const Account = () => {
             <input
               value={email}
               onChange={emailChangeHandler}
-              placeholder='Email'
               type='email'
+              placeholder='* Email'
+              maxlength='50'
               className={classes['form-element']}
               required
             />
@@ -125,7 +131,7 @@ const Account = () => {
             <input
               value={phoneNumber}
               onChange={phoneNumberChangeHandler}
-              placeholder='Phone Number'
+              placeholder='* Phone Number'
               type='number'
               className={classes['form-element']}
               required
@@ -137,8 +143,9 @@ const Account = () => {
               value={password}
               onChange={passwordChangeHandler}
               onBlur={passwordInputBlurHandler}
-              placeholder='Password'
               type='password'
+              placeholder='* Password - At least 6 characters'
+              maxlength='50'
               className={passwordInputClassName}
               required
             />
@@ -154,8 +161,9 @@ const Account = () => {
               value={confirmPassword}
               onChange={confirmPasswordChangeHandler}
               onBlur={confirmPasswordBlurHandler}
-              placeholder='Confirm Password'
               type='password'
+              placeholder='*Confirm Password'
+              maxlength='50'
               className={confirmPasswordInputClassName}
               required
             />

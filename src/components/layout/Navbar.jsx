@@ -8,22 +8,25 @@ const Navbar = ({ toggleModal }) => {
     <div className={classes.navbar}>
       <div className={classes.container}>
         <Link to='/'>
-          <GiCoffeeBeans size={30} style={{ color: '#fff' }} />
+          <div className={classes['logo-container']}>
+            <GiCoffeeBeans size={30} style={{ color: '#fff' }} />{' '}
+            <h2>Ben's Coffee</h2>
+          </div>
         </Link>
-        <h2>Ben's Coffee</h2>
+
         <div className={classes.navigation}>
           <NavLink
             to='/menue'
             style={({ isActive }) =>
-              isActive ? { borderBottom: '0.4rem solid white' } : undefined
+              isActive ? { borderColor: '#fff' } : undefined
             }
           >
-            Menue
+            Menu
           </NavLink>
           <NavLink
             to='/account'
             style={({ isActive }) =>
-              isActive ? { borderBottom: '0.4rem solid white' } : undefined
+              isActive ? { borderColor: '#fff' } : undefined
             }
           >
             Join now

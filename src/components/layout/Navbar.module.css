@@ -4,9 +4,19 @@
   height: 5rem;
 }
 
-.navbar h2 {
+.navbar a {
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container h2 {
   margin-left: 0.5rem;
   font-family: 'Merienda One', cursive;
+  color: #fff;
 }
 
 .container {
@@ -16,24 +26,18 @@
   width: 90%;
 }
 
-.container a {
-  text-decoration: none;
-}
-
-.container h1 {
-  color: white;
-  text-decoration: none;
-}
-
 .navigation {
   margin-left: auto;
 }
 
 .navigation a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   display: none;
   font-size: 1.25rem;
+  margin-bottom: -1.8rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 0.45rem solid #2a303c;
 }
 
 .navigation a:last-of-type {
