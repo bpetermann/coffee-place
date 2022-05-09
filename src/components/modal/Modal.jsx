@@ -10,7 +10,7 @@ const Modal = ({ onClose }) => {
       <div className={classes.container}>
         <Link to='/'>Home</Link>
         <Link to='/account'>Join now</Link>
-        <Link to='/menue'>Menue</Link>
+        <Link to='/menue'>Menu</Link>
       </div>
     </>
   );

@@ -84,7 +84,7 @@ const Account = () => {
 
   return (
     <Container>
-      <h2 className={classes['headline']}>Join now /Create Account </h2>
+      <h2 className={classes['headline']}>Join now / Create Account </h2>
 
       <div className={classes['form-container']}>
         <h2 className={titleClassName}>{title}</h2>
