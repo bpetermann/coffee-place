@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 import classes from './Account.module.css';
 import Container from '../components/shared/Container';
 import Button from '../components/shared/Button';
+import { AiOutlineEye } from 'react-icons/ai';
 
 const Account = () => {
-  const [title, setTitle] = useState('Join now!');
   const [formData, setFormData] = useState({
     firstname: '',
     lastname: '',
@@ -13,6 +14,7 @@ const Account = () => {
     password: '',
     confirmPassword: '',
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [passwordTouched, setPasswordTouched] = useState(false);
   const [confirmPasswordTouched, setConfirmPasswordIsTouched] = useState(false);
 
@@ -38,7 +40,7 @@ const Account = () => {
       return;
     }
 
-    setTitle('Success!');
+    toast.success('Registration Successful!', {});
     setFormData({
       firstname: '',
       lastname: '',
@@ -66,14 +68,7 @@ const Account = () => {
       <h2 className={classes['headline']}>Join now / Create Account </h2>
 
       <div className={classes['form-container']}>
-        <h2
-          className={
-            title.indexOf('Success') ? '' : `${classes['title-success']}`
-          }
-        >
-          {title}
-        </h2>
-        <p>* indicates required field</p>
+        <h2>Join now!</h2>
         <form className={classes['form']} onSubmit={submitHandler}>
           <label>
             First Name:
@@ -126,46 +121,62 @@ const Account = () => {
               required
             />
           </label>
+
           <label>
             Password:
-            <input
-              value={password}
-              onChange={onChangeHandler}
-              onBlur={passwordInputBlurHandler}
-              type='password'
-              placeholder='Password'
-              id='password'
-              maxLength='50'
-              className={
-                !passwordIsInavlid
-                  ? classes['form-element']
-                  : `${classes['form-control']} ${classes['invalid']}`
-              }
-              required
-            />
+            <div className={classes['passwordInputDiv']}>
+              <input
+                value={password}
+                onChange={onChangeHandler}
+                onBlur={passwordInputBlurHandler}
+                type={showPassword ? 'text' : 'password'}
+                placeholder='Password'
+                id='password'
+                maxLength='50'
+                className={
+                  !passwordIsInavlid
+                    ? classes['form-element']
+                    : `${classes['form-control']} ${classes['invalid']}`
+                }
+                required
+              />
+              <AiOutlineEye
+                onClick={() => setShowPassword((prevState) => !prevState)}
+                size={24}
+                className={classes['showPassword']}
+              />
+            </div>
             {passwordIsInavlid && (
               <p className={classes['invalid-message']}>
                 *Your password must be at least 6 characters long
               </p>
             )}
           </label>
+
           <label>
             Confirm Password:
-            <input
-              value={confirmPassword}
-              onChange={onChangeHandler}
-              onBlur={confirmPasswordBlurHandler}
-              type='password'
-              placeholder='Confirm Password'
-              id='confirmPassword'
-              maxLength='50'
-              className={
-                !confirmPasswordIsInvalid
-                  ? classes['form-element']
-                  : `${classes['form-control']} ${classes['invalid']}`
-              }
-              required
-            />
+            <div className={classes['passwordInputDiv']}>
+              <input
+                value={confirmPassword}
+                onChange={onChangeHandler}
+                onBlur={confirmPasswordBlurHandler}
+                type={showPassword ? 'text' : 'password'}
+                placeholder='Confirm Password'
+                id='confirmPassword'
+                maxLength='50'
+                className={
+                  !confirmPasswordIsInvalid
+                    ? classes['form-element']
+                    : `${classes['form-control']} ${classes['invalid']}`
+                }
+                required
+              />
+              <AiOutlineEye
+                onClick={() => setShowPassword((prevState) => !prevState)}
+                size={24}
+                className={classes['showPassword']}
+              />
+            </div>
             {confirmPasswordIsInvalid && (
               <p className={classes['invalid-message']}>
                 *Passwords do not match

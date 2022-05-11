@@ -12,6 +12,8 @@ import Account from './pages/Account';
 import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import Modal from '../src/components/modal/Modal';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   const [modal, setModal] = useState(false);
@@ -41,6 +43,7 @@ function App() {
           <Route path='/account' element={<Account />} />
           <Route path='/*' element={<Navigate to='/' replace />} />
         </Routes>
+        <ToastContainer />
       </div>
     </Router>
   );
