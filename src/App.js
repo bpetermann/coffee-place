@@ -25,7 +25,6 @@ function App() {
   useEffect(() => {
     if (modal) {
       document.body.classList.add('no-scroll');
-      console.log('hi');
     } else {
       document.body.classList.remove('no-scroll');
     }
